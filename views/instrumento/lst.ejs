@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Instrumentos</title>
+</head>
+<body>
+    <h1>Lista de Instrumentos</h1>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Fabricante</th>
+                <th>Preço</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% instrumentos.forEach(instrumento => { %>
+            <tr>
+                <td><%= instrumento.nome %></td>
+                <td><%= instrumento.fabricante %></td>
+                <td><%= instrumento.preco.toFixed(2) %></td>
+                <td><%= instrumento.tipo %></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <br>
+    <a href="/instrumento/add">Adicionar Instrumento</a>
+</body>
+</html>

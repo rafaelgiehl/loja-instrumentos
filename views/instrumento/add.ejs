@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Instrumento</title>
+</head>
+<body>
+    <h1>Adicionar Instrumento</h1>
+    <form action="/instrumento/add" method="POST">
+        <label>Nome:</label><br>
+        <input type="text" name="nome" required>
+        <br><br>
+
+        <label>Fabricante:</label>
+        <input type="text"  name="fabricante" required>
+        <br><br>
+
+        <label>Preço:</label>
+        <input type="number" name="preco" step="0.01" required>
+        <br><br>
+
+        <label>Tipo:</label>
+        <input type="text" name="tipo" required>
+        <br><br>
+
+        <button type="submit">Adicionar</button>
+    </form>
+    <br>
+    <a href="/instrumento/list">Ver Lista de Instrumentos</a>
+</body>
+</html>
